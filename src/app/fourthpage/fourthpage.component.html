@@ -1,0 +1,14 @@
+
+<html>
+<h2 class="text-center pt-3">Nos Articles</h2>
+<h4 style="color:green ; font-weight: bold;font-style: italic;">disponible!</h4>
+<div class="container">
+<div class="row">
+<ng-container *ngFor="let mat of materiels">
+    <div class="col-4 pt-3" *ngIf="mat.quantite >0" >
+    <app-materiel [materiel]="mat" > </app-materiel>
+    </div>
+</ng-container>
+</div>
+</div>
+</html>

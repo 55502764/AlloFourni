@@ -1,0 +1,40 @@
+<html>
+    <div class="container" class="c">
+        <div class="row">
+            <div class="col-6">
+        <h1 style="color:green; font-weight: bold;font-style: italic;">  Détail sur article num: {{materiel.id}}</h1>
+        <ul class="list-group">
+            <li class="list-group-item"><img [src]="materiel.photo" alt="photo"></li>
+            <li class="list-group-item">Marque: {{materiel.marque}}</li>
+            <li class="list-group-item">Prix par jour: {{materiel.prix}} DT </li>
+            <li class="list-group-item">Description : {{materiel.description}}</li>
+            <li class="list-group-item">Quantité: {{materiel.quantite}} </li>
+            <li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme</li>
+             
+            <li> <button class="btn btn-info" (click)="onRetour()">retour</button>  </li>
+        </ul>
+        </div>
+        <div class="col-6" >
+            <h2>Louer cet article </h2>
+            <p>votre commande sera livrée pendant 24h, <br>paiement lors de la livraison </p>
+             
+            <form action="/action_page.php">
+                
+                <label for="lname">nombre du jour: </label><br>
+                <input type="number" id="x" name="x" placeholder=1 > 
+                <label for="fname"> entrez votre adresse:</label>
+                <input type="text" id="fname" name="fname" placeholder="tunis,xxxxx"><br>
+                <label for="fname"> votre numero:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="+216">
+                <input type="button" value="valider"class="btn btn-info"   (click)="onAffiche()"/>
+            
+            </form>
+        </div>
+        </div>
+        
+        
+        </div>
+        <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+</html>

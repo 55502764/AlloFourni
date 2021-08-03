@@ -1,0 +1,21 @@
+<html>
+<div class="card text-center" style="background-color:green; ">
+    <div class="card">
+        <div class="card-header">
+            {{mat.libelle | titlecase}}
+        </div>
+    <div class="card-body">
+            <img [src]="mat.photo" alt="photo" >
+    
+    <div class="badge badge-pill" [ngClass]="{'badge-primary':mat.hautGamme,'badge-dark':!mat.hautGamme}">
+        Prix par jour: {{mat.prix}} DT
+        <i [ngClass]="{'fa fa-thumbs-up': mat.hautGamme}"></i>
+        </div>
+        </div>
+        <div class="card-footer text-muted">
+            <button class="btn btn-primary" [routerLink]="['/boutique',mat.id]">Détails</button> 
+          </div>
+        
+    </div>
+    </div>
+    </html>
